@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FoodDetailFragment">
+
+    <ImageView
+        android:id="@+id/detail_Image"
+        android:layout_width="match_parent"
+        android:layout_height="217dp"
+        android:layout_marginTop="32dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/add_picture"
+        android:onClick="imageSave"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:hint="Yemek adınızı giriniz"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="@+id/detail_Image"
+        app:layout_constraintStart_toStartOf="@+id/detail_Image"
+        app:layout_constraintTop_toBottomOf="@+id/detail_Image"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/detail_Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textField2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:hint="Malzemeleri giriniz"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="@+id/textField"
+        app:layout_constraintStart_toStartOf="@+id/textField"
+        app:layout_constraintTop_toBottomOf="@+id/textField"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/detail_Material"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/button_Save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kaydet"
+        android:onClick="save"
+        android:layout_margin="25dp"
+        app:layout_constraintEnd_toEndOf="@+id/textField2"
+        app:layout_constraintStart_toStartOf="@+id/textField2"
+        app:layout_constraintTop_toBottomOf="@+id/textField2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
