@@ -1,3 +1,0 @@
-# KotlinProjects
-basic level
-
